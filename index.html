@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Password Generator</h1>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Password Display -->
+    <div class="password-box">
+      <input type="text" id="password" readonly placeholder="Your secure password will appear here">
+      <button id="copy-btn" aria-label="Copy password to clipboard">Copy</button>
+    </div>
+
+    <!-- Strength Indicator -->
+    <div id="strength-indicator"></div>
+
+    <!-- Settings -->
+    <div class="settings">
+      <label>
+        <span>Length</span>
+        <input type="number" id="length" min="4" max="32" value="12" aria-label="Password length">
+      </label>
+
+      <label>
+        <input type="checkbox" id="uppercase" checked aria-label="Include uppercase letters">
+        Include Uppercase
+      </label>
+
+      <label>
+        <input type="checkbox" id="numbers" checked aria-label="Include numbers">
+        Include Numbers
+      </label>
+
+      <label>
+        <input type="checkbox" id="symbols" checked aria-label="Include symbols">
+        Include Symbols
+      </label>
+
+      <button id="generate-btn" aria-label="Generate password">Generate Password</button>
+    </div>
+
+    <!-- Saved Passwords -->
+    <section class="saved-passwords-section">
+      <h2>Saved Passwords</h2>
+      <ul id="saved-passwords"></ul>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

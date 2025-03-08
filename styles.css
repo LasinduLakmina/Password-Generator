@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+body.light-mode {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: background 0.3s ease;
+}
+
+body.light-mode .container {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Switch for Dark/Light Mode */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Password Box Styling */
+.password-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#password {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+body.light-mode #password {
+  background: #fff;
+  color: #333;
+}
+
+#copy-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#copy-btn:hover {
+  background: #ff4d4d;
+}
+
+/* Strength Indicator Styling */
+#strength-indicator {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.weak {
+  color: #ff4d4d;
+}
+
+.medium {
+  color: #f7b731;
+}
+
+.strong {
+  color: #4caf50;
+}
+
+/* Settings Styling */
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.settings label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings input[type="number"] {
+  width: 50px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+body.light-mode .settings input[type="number"] {
+  background: #fff;
+  color: #333;
+}
+
+.settings input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+#generate-btn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #6e8efb;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#generate-btn:hover {
+  background: #5a7de9;
+}
+
+/* Saved Passwords Section */
+.saved-passwords-section {
+  margin-top: 1.5rem;
+}
+
+.saved-passwords-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#saved-passwords {
+  list-style: none;
+  padding: 0;
+}
+
+#saved-passwords li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+body.light-mode #saved-passwords li {
+  background: #fff;
+  color: #333;
+}
+
+#saved-passwords li button {
+  background: none;
+  border: none;
+  color: #ff6f61;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+#saved-passwords li button:hover {
+  text-decoration: underline;
+}
